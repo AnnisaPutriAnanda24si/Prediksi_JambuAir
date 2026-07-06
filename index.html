@@ -54,10 +54,10 @@
           <ul>
             <li><a href="#hero" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Kategori Daun</a></li>
+            <li><a href="#services">Leaf Categories</a></li>
             <!-- <li><a href="#portfolio">Portfolio</a></li> -->
             <li><a href="#team">Team</a></li>
-            <li><a href="#uploadForm">Upload Citra</a></li>
+            <li><a href="#uploadForm">Upload Your Leaf</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -173,7 +173,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Kategori Daun</h2>
+        <h2>Leaf Categories</h2>
         <p>Berikut Katgori Daun yang akan kami gunakan</p>
       </div><!-- End Section Title -->
 
@@ -394,8 +394,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Kelompok 2</h2>
-        <p>Anggota Kelompok 2 yang berperan dalam menyusun sistem ini</p>
+        <h2>Group 2</h2>
+        <p>Members of Group 2 who played a role in developing this system</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -452,8 +452,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Deteksi Penyakit Daun Jambu Air</h2>
-          <p>Upload citra daun untuk dilakukan klasifikasi otomatis.</p>
+          <h2>Detection of Water Apple Leaf Diseases</h2>
+          <p>Upload your leaf for automatic classification.</p>
         </div>
 
         <div class="row justify-content-center">
@@ -511,7 +511,7 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Daun Jambu Air</span>
+            <span class="sitename">Rose Apple/Water Apple Leaf</span>
           </a>
           <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta
             donna mare fermentum iaculis eu non diam phasellus.</p>
@@ -528,9 +528,9 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About us</a></li>
-            <li><a href="#">Kategori Daun</a></li>
+            <li><a href="#">Leaf Categories</a></li>
             <li><a href="#">Team</a></li>
-            <li><a href="#">Upload Citra</a></li>
+            <li><a href="#">Upload Your Leaf</a></li>
           </ul>
         </div>
 
@@ -655,7 +655,7 @@
         if (fileInput.files.length === 0) {
 
           $("#status").html(
-            '<div class="alert alert-warning">Pilih gambar terlebih dahulu.</div>'
+            '<div class="alert alert-warning">Select an image first.</div>'
           );
 
           return;
@@ -709,102 +709,199 @@
 
             let hasilHTML = "";
 
+            // if (json.label == 1) {
+
+            //   hasilHTML = `
+            //         <div class="card border-dark shadow-sm">
+            //             <div class="card-body">
+
+            //                 <h3>
+            //                    Daun Jamur Jelaga
+            //                 </h3>
+
+            //                 <p>
+            //                 Daun tertutup lapisan hitam akibat serangan
+            //                 jamur jelaga.
+            //                 </p>
+
+            //                 <h5>Penyebab</h5>
+
+            //                 <ul>
+            //                     <li>Embun madu dari kutu daun.</li>
+            //                     <li>Kelembaban tinggi.</li>
+            //                 </ul>
+
+            //                 <h5>Penanganan</h5>
+
+            //                 <ul>
+            //                     <li>Bersihkan daun terinfeksi.</li>
+            //                     <li>Kendalikan hama.</li>
+            //                     <li>Gunakan fungisida.</li>
+            //                 </ul>
+
+            //             </div>
+            //         </div>
+            //         `;
+
+            // }
+            // else if (json.label == 2) {
+
+            //   hasilHTML = `
+            //         <div class="card border-success shadow-sm">
+            //             <div class="card-body">
+
+            //                 <h3 class="text-success">
+            //                    Daun Normal
+            //                 </h3>
+
+            //                 <p>
+            //                 Daun dalam kondisi sehat dan tidak ditemukan
+            //                 gejala penyakit.
+            //                 </p>
+
+            //                 <ul>
+            //                     <li>Warna hijau merata.</li>
+            //                     <li>Tidak ada bercak.</li>
+            //                     <li>Tidak ada jamur.</li>
+            //                     <li>Pertumbuhan normal.</li>
+            //                 </ul>
+
+            //             </div>
+            //         </div>
+            //         `;
+
+            // }
+            // else {
+
+            //   hasilHTML = `
+            //                       <div class="card border-warning shadow-sm">
+            //             <div class="card-body">
+
+            //                 <h3 class="text-warning">
+            //                   Daun Bintil
+            //                 </h3>
+
+            //                 <p>
+            //                 Daun mengalami pembentukan bintil atau tonjolan
+            //                 yang dapat menghambat pertumbuhan tanaman.
+            //                 </p>
+
+            //                 <h5>Ciri-ciri</h5>
+
+            //                 <ul>
+            //                     <li>Terdapat bintil pada daun.</li>
+            //                     <li>Permukaan daun tidak rata.</li>
+            //                     <li>Daun mulai menguning.</li>
+            //                 </ul>
+
+            //                 <h5>Penanganan</h5>
+
+            //                 <ul>
+            //                     <li>Pangkas daun terserang.</li>
+            //                     <li>Jaga kebersihan kebun.</li>
+            //                     <li>Gunakan pestisida bila diperlukan.</li>
+            //                 </ul>
+
+            //             </div>
+            //         </div>
+            //         `;
+
+            // }
+
             if (json.label == 1) {
 
               hasilHTML = `
-                    <div class="card border-dark shadow-sm">
-                        <div class="card-body">
+        <div class="card border-dark shadow-sm">
+            <div class="card-body">
 
-                            <h3>
-                               Daun Jamur Jelaga
-                            </h3>
+                <h3>
+                    Sooty Mold Leaf
+                </h3>
 
-                            <p>
-                            Daun tertutup lapisan hitam akibat serangan
-                            jamur jelaga.
-                            </p>
+                <p>
+                The leaf surface is covered with a black, soot-like fungal layer triggered by the presence of honeydew from sap-sucking insects.
+                </p>
 
-                            <h5>Penyebab</h5>
+                <h5>Causes</h5>
 
-                            <ul>
-                                <li>Embun madu dari kutu daun.</li>
-                                <li>Kelembaban tinggi.</li>
-                            </ul>
+                <ul>
+                    <li>Honeydew secretions from insects (aphids, whiteflies, mealybugs).</li>
+                    <li>High humidity and dense plant canopy.</li>
+                    <li>Ants protecting the honeydew-producing pests.</li>
+                </ul>
 
-                            <h5>Penanganan</h5>
+                <h5>Management</h5>
 
-                            <ul>
-                                <li>Bersihkan daun terinfeksi.</li>
-                                <li>Kendalikan hama.</li>
-                                <li>Gunakan fungisida.</li>
-                            </ul>
+                <ul>
+                    <li>Wash off the black mold with a mild soap solution and rinse with clean water.</li>
+                    <li>Control sap-sucking insects using neem oil or organic insecticides.</li>
+                    <li>Improve air circulation and ensure adequate sunlight exposure.</li>
+                </ul>
 
-                        </div>
-                    </div>
-                    `;
+            </div>
+        </div>
+        `;
 
             }
             else if (json.label == 2) {
 
               hasilHTML = `
-                    <div class="card border-success shadow-sm">
-                        <div class="card-body">
+        <div class="card border-success shadow-sm">
+            <div class="card-body">
 
-                            <h3 class="text-success">
-                               Daun Normal
-                            </h3>
+                <h3 class="text-success">
+                    Normal Leaf
+                </h3>
 
-                            <p>
-                            Daun dalam kondisi sehat dan tidak ditemukan
-                            gejala penyakit.
-                            </p>
+                <p>
+                The leaf is in a healthy condition with no visible symptoms of disease or pest infestation.
+                </p>
 
-                            <ul>
-                                <li>Warna hijau merata.</li>
-                                <li>Tidak ada bercak.</li>
-                                <li>Tidak ada jamur.</li>
-                                <li>Pertumbuhan normal.</li>
-                            </ul>
+                <ul>
+                    <li>Even green coloration.</li>
+                    <li>No spots or lesions.</li>
+                    <li>No fungal growth.</li>
+                    <li>Normal growth pattern.</li>
+                </ul>
 
-                        </div>
-                    </div>
-                    `;
+            </div>
+        </div>
+        `;
 
             }
             else {
 
               hasilHTML = `
-                                  <div class="card border-warning shadow-sm">
-                        <div class="card-body">
+        <div class="card border-warning shadow-sm">
+            <div class="card-body">
 
-                            <h3 class="text-warning">
-                              Daun Bintil
-                            </h3>
+                <h3 class="text-warning">
+                    Leaf Galls
+                </h3>
 
-                            <p>
-                            Daun mengalami pembentukan bintil atau tonjolan
-                            yang dapat menghambat pertumbuhan tanaman.
-                            </p>
+                <p>
+                The leaf exhibits abnormal bumps or swellings, which are the plant's permanent response to tissue irritation.
+                </p>
 
-                            <h5>Ciri-ciri</h5>
+                <h5>Characteristics</h5>
 
-                            <ul>
-                                <li>Terdapat bintil pada daun.</li>
-                                <li>Permukaan daun tidak rata.</li>
-                                <li>Daun mulai menguning.</li>
-                            </ul>
+                <ul>
+                    <li>Presence of galls or nodules on the leaf surface.</li>
+                    <li>Uneven or distorted leaf texture (typically on young leaves).</li>
+                    <li>Potential premature leaf drop if infestation is severe.</li>
+                </ul>
 
-                            <h5>Penanganan</h5>
+                <h5>Management</h5>
 
-                            <ul>
-                                <li>Pangkas daun terserang.</li>
-                                <li>Jaga kebersihan kebun.</li>
-                                <li>Gunakan pestisida bila diperlukan.</li>
-                            </ul>
+                <ul>
+                    <li>Leave them alone if the infestation is minor (healthy plants will naturally recover).</li>
+                    <li>Identify and treat the specific pest during the next growing season if damage is severe.</li>
+                    <li>Maintain overall plant health to help it withstand energy and nutrient stress.</li>
+                </ul>
 
-                        </div>
-                    </div>
-                    `;
+            </div>
+        </div>
+        `;
 
             }
 
@@ -814,11 +911,11 @@
 
           error: function () {
 
-             console.log('Error: ' + data.error);
+            console.log('Error: ' + data.error);
 
             $("#status").html(
               '<div class="alert alert-danger">Server tidak dapat dihubungi.</div>'
-              
+
             );
 
           }
